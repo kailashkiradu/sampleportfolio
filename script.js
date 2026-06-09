@@ -8,14 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Load saved theme or check system preference
+    // Load saved theme or default to light theme
     const savedTheme = localStorage.getItem('portfolio-theme');
-    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
 
     if (savedTheme) {
         body.className = savedTheme;
     } else {
-        body.className = systemPrefersLight ? 'light-theme' : 'dark-theme';
+        body.className = 'light-theme';
     }
 
     themeToggle.addEventListener('click', () => {
