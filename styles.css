@@ -646,45 +646,45 @@ body.light-theme .moon-icon { display: block; }
     transform: scale(1.1);
 }
 
-/* Memberships Box & Cards */
-.memberships-box {
+/* Memberships & Awards Boxes & Cards */
+.memberships-box, .awards-box {
     margin-top: 4rem;
     border-top: 1px solid var(--border-color);
     padding-top: 3rem;
 }
-.memberships-box h3 {
+.memberships-box h3, .awards-box h3 {
     text-align: center;
     margin-bottom: 2rem;
 }
-.memberships-grid {
+.memberships-grid, .awards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
-.member-card {
+.member-card, .award-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     padding: 1.5rem;
     border-radius: var(--radius-md);
     transition: all var(--transition-normal);
 }
-.member-card:hover {
+.member-card:hover, .award-card:hover {
     border-color: var(--accent-secondary);
     transform: translateY(-2px);
 }
-.member-card .member-date {
+.member-card .member-date, .award-card .award-date {
     display: block;
     color: var(--accent-secondary);
     font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 4px;
 }
-.member-card h4 {
+.member-card h4, .award-card h4 {
     font-size: 1.05rem;
     margin-bottom: 4px;
     font-family: var(--font-body);
 }
-.member-card p {
+.member-card p, .award-card p {
     color: var(--text-muted);
     font-size: 0.85rem;
 }
