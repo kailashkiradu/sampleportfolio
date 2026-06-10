@@ -1728,6 +1728,97 @@ body.light-theme .moon-icon { display: block; }
 }
 
 /* ==========================================================================
+   Conference Presentations & Symposiums Tabs
+   ========================================================================== */
+
+.presentations-container {
+    margin-top: 4rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+}
+.presentations-container h3 {
+    margin-bottom: 1.5rem;
+}
+.presentations-tabs {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.pres-tab-btn {
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.pres-tab-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+}
+.pres-tab-btn.active {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    border-color: var(--accent-primary);
+}
+
+.pres-tab-content {
+    display: none;
+}
+.pres-tab-content.active {
+    display: block;
+}
+
+.pres-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.pres-list li {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+.pres-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.pres-list li strong {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+.pres-meta {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+.pres-award-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--accent-secondary-glow);
+    border: 1px solid var(--accent-secondary);
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+
+/* ==========================================================================
    Print Style overrides for CV Downloads
    ========================================================================== */
 

@@ -402,6 +402,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- 10. Conference Presentations Tabs ---
+    const presTabBtns = document.querySelectorAll('.pres-tab-btn');
+    const presTabContents = document.querySelectorAll('.pres-tab-content');
+
+    presTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetTab = btn.getAttribute('data-tab');
+
+            // Deactivate all buttons & contents
+            presTabBtns.forEach(b => b.classList.remove('active'));
+            presTabContents.forEach(c => c.classList.remove('active'));
+
+            // Activate clicked button & corresponding content
+            btn.classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+
     // Close modal on ESC key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
