@@ -210,13 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 7. Print-CV Trigger ---
-    const cvBtn = document.getElementById('cv-download-btn');
-    if (cvBtn) {
-        cvBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.print();
-        });
-    }
+    // Removed to allow direct download of the user-provided CV PDF file from the public/assets directory.
 
     // --- 8. Contact Form Validation & Submission UI ---
     if (contactForm) {
