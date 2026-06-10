@@ -1823,11 +1823,18 @@ body.light-theme .moon-icon { display: block; }
    ========================================================================== */
 
 @media print {
-    /* Hide everything on screen */
-    body, html, main, header, footer, .modal-overlay, #theme-toggle, .hamburger {
+    /* Hide all elements on the screen except the print CV container */
+    body > *:not(.print-cv-container) {
         display: none !important;
-        background: none !important;
+    }
+    
+    html, body {
+        background: #ffffff !important;
         color: #000000 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
     /* Show and style Print Container */
